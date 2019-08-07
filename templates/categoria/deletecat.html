@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %}
+     Blog|Postagens
+{% endblock title %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock scripts %}
+
+{% block body %}
+
+<form method="post">
+        {% csrf_token %}
+        <p>Você tem certeza que quer excluir a categoria abaixo?</p>
+        {{post.texto}}
+<input type="submit" value="Deletar">
+    </form>
+</form>
+
+{% endblock body %}

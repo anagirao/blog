@@ -27,8 +27,9 @@
     <center><p> {{p.post}} </p><br></center>
 
     <center><p> {{p.autor}} </p>
-    <p>{{p.categoria}}</p></center>
-    
+    <a href="{% url 'categoria:updatecat_post' p.categoria.id %}">{{p.categoria}}</a>/
+    <a href="{% url 'categoria:deletecat_categoria' p.categoria.id %}">Deletar</a>
+    </center>
     <p> {{p.created_at}} </p><br>
     <center>
     <a href="{% url 'posts:update_post' p.id %}">editar</a> 
