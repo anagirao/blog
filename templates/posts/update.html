@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %}
+     Blog|Postagens
+{% endblock title %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock scripts %}
+
+{% block body %}
+
+<h3>Editar Postagem</h3>
+
+<form method="post">
+{% csrf_token  %}
+{{form.as_p}}
+<input type="submit" value="Editar">
+
+</form>
+
+{% endblock body %}

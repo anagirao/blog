@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %}
+     Blog|Postagens
+{% endblock title %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock scripts %}
+
+{% block style %} 
+    <style>
+        body{
+            background-color: black;
+        }
+    
+    
+    </style>
+
+{% endblock style %}
+
+{% block body %}
+<div class="AllDivs">
+{% for p in posts %}
+    <div class =  "Divisao">
+    <center><p> {{p.post}} </p><br></center>
+
+    <center><p> {{p.autor}} </p>
+    <p>{{p.categoria}}</p></center>
+    
+    <p> {{p.created_at}} </p><br>
+    <center>
+    <a href="{% url 'posts:update_post' p.id %}">editar</a> 
+    <a href="{% url 'posts:delete_post' p.id%}">deletar</a></center>
+    </div>
+{% endfor %}    
+</div>
+{% endblock body %}

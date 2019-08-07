@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %}
+     Blog|Usuarios
+{% endblock title %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock scripts %}
+{% block style %} 
+<style>
+    body{
+        background-image: url('https://wallpaperstream.com/wallpapers/full/galaxy/Black-and-White-Galaxy-Wallpaper.jpg');
+        color: whitesmoke;
+        
+    }
+
+
+</style>
+{% endblock style %}
+{% block body %}
+
+{% for u in users %}
+    <div class= "Enquadramento">
+    <p> {{u.email}} </p>
+    <p> {{u.username}} </p>
+</div>
+{% endfor %}    
+
+{% endblock body %}

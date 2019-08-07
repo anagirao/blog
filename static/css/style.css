@@ -1,0 +1,53 @@
+.navbar{
+    border: 1px solid whitesmoke;
+    background-color: black;
+}
+
+.menu{
+    
+    display: flex;
+    justify-content: center;
+}
+.menu ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu ul li a{
+    color: whitesmoke;
+}
+
+.menu ul li a:hover{
+    color: blueviolet;
+}
+
+.Divisao {
+    color: white;
+    border: 1px solid black;
+    width: 250px;
+    margin: 20px;
+    background-image: url('https://www.larutadelsorigens.cat/filelook/full/39/398023/black-galaxy-wallpaper.jpg');
+
+}
+
+.Enquadramento{
+
+    color:whitesmoke;
+    border: 1px solid whitesmoke;
+    width: 250px;
+    margin: 20px;
+
+}
+
+.AllDivs{
+    display: flex;
+    flex-flow: row wrap;
+
+
+}
