@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %}
+     Blog|Postagens
+{% endblock title %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock scripts %}
+
+{% block style %} 
+<style>
+    body{
+        background-image: url('https://wallpaperstream.com/wallpapers/full/galaxy/Black-and-White-Galaxy-Wallpaper.jpg');
+        color: whitesmoke;
+        
+    }
+
+
+</style>
+
+
+
+{% endblock style %}
+{% block body %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type ="submit" value="Enviar">
+</form>
+  
+
+{% endblock body %}
