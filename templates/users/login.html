@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %}
+     Blog|Login
+{% endblock title %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock scripts %}
+{% block style %} 
+
+
+
+
+{% endblock style %}
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+<input type="submit" value="Logar">
+
+</form>
+
+
+{% endblock body %}

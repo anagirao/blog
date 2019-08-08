@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %}
+     Blog|SignUp
+{% endblock title %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock scripts %}
+{% block head %}
+{% block style %} 
+
+
+
+
+{% endblock style %}
+{% endblock head %}
+{% block body %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type ="submit" value="SignUp">
+</form>
+  
+
+{% endblock body %}

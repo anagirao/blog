@@ -35,6 +35,23 @@
                             <li class="nav-item">
                               <a class="nav-link" href="{% url 'users:list_users' %}">Usuários</a>
                             </li>
+                            
+                          {% if not request.user.is_authenticated %}  
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'users:login_users' %}">Login</a>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url 'users:signup_users' %}">  SignUp  </a>
+                          </li>      
+                          </li>  
+                          {% else %}
+                          <li class="nav-item">
+                            <a class="nav-link" href="">  {{request.user}}  </a>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'users:logout_users' %}">  Logout  </a>
+                            </li>   
+                          </li>
+                          {% endif %}
+                            
                             <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" href="{% url 'posts:criar_post' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Criar 
