@@ -8,7 +8,7 @@
 {% block scripts %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 {% endblock scripts %}
-
+{% block head %}
 {% block style %} 
 <style>
     body{
@@ -23,6 +23,7 @@
 
 
 {% endblock style %}
+{% endblock head %}
 {% block body %}
 <form action="" method="post">
     {% csrf_token %}
