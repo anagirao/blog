@@ -31,3 +31,18 @@ body{
     color: whitesmoke;
     font-family: 'Berkshire Swash', cursive;
 }
+select{
+    background-color: transparent;
+    color: grey;
+
+}
+input{
+    background-color: transparent;
+  color: grey;
+
+}
+textarea{
+  background-color: transparent;
+  color: grey;
+
+}

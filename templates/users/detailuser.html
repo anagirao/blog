@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static  %}
+
+{% block title %}
+     Blog|Detalhes
+{% endblock title %}
+
+{% block scripts %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock scripts %}
+
+{% block style %} 
+
+
+{% endblock style %}
+
+{% block body %}
+
+   <h6>Detalhes do usuário:</h6><br>
+   
+    <p> User:    {{users.username}} </p>
+
+    <p>Email:    {{users.email}} </p>
+   
+    <p> Criado em:     {{users.created_at}}    </p>
+  
+    <p>Conta adm:    {{users.is_staff}}  </p>
+   
+    <p> Ultimo acesso:    {{users.last_login}}    </p>
+
+   
+    </div>
+
+{% endblock body %}

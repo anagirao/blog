@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static  %}
+{% load widget_tweaks %}
 
 {% block title %}
      Blog|Postagens
@@ -19,7 +20,9 @@
 {% block body %}
 <form action="" method="post">
     {% csrf_token %}
-    {{form.as_p}}
+   <p>Autor: {% render_field form.autor %} </p>
+   <p>Categoria: {% render_field form.categoria %}</p>
+   <p> {% render_field form.post %}</p>
     <input type ="submit" value="Enviar">
 </form>
   
