@@ -18,6 +18,10 @@
 <div class="AllDivs">
 {% for p in posts %}
     <div class =  "Divisao">
+    {%if p.image %}
+    
+    <p><img src = "{{p.image.url}}"></p>
+{% endif %}
     <center><p> {{p.post}} </p><br></center>
 
     <center><p> {{p.autor}} </p>
@@ -28,6 +32,7 @@
     <center>
     <a href="{% url 'posts:update_post' p.id %}">editar</a> 
     <a href="{% url 'posts:delete_post' p.id%}">deletar</a></center>
+    <a href="{% url 'posts:detail_post' p.id %}">detalhes</a>
     </div>
 {% endfor %}    
 </div>

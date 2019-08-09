@@ -135,6 +135,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#Media Files, para adicionar imagens no projeto, é necessário esses files no settings
+MEDIA_URL = '/media/'
+MEDIA_ROOOT = os.path.join(BASE_DIR, 'mediafiles')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/var/www/static/',

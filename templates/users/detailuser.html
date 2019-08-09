@@ -16,6 +16,19 @@
 
 {% block body %}
 
+<h5>Suas postagens:</h5>
+
+{% for u in users.postsFromUser.all %}
+
+    <p> {{u.post}}</p>
+    {% empty %}
+    <p>Você não tem postagens ):</p>
+    
+{% endfor %}   
+
+
+
+
    <h6>Detalhes do usuário:</h6><br>
    
     <p> User:    {{users.username}} </p>

@@ -18,11 +18,14 @@
 {% endblock style %}
 {% endblock head %}
 {% block body %}
-<form action="" method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
    <p>Autor: {% render_field form.autor %} </p>
    <p>Categoria: {% render_field form.categoria %}</p>
    <p> {% render_field form.post %}</p>
+
+   <p>{% render_field form.image %}</p>
+   
     <input type ="submit" value="Enviar">
 </form>
   

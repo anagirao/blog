@@ -33,16 +33,16 @@ body{
 }
 select{
     background-color: transparent;
-    color: grey;
+    color: silver;
 
 }
 input{
     background-color: transparent;
-  color: grey;
+  color:silver;
 
 }
 textarea{
   background-color: transparent;
-  color: grey;
+  color: silver;
 
 }
